@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Sign up</title>  
+    <link rel="stylesheet" type="text/css" href="log.css"/>  
+</head>  
+<body>  
+    <div id="login">  
+        <h1>Sign up</h1>  
+        <form action="regist.cgi" method="post">  
+            <input type="text" required="required" placeholder="Username" name="user"></input>  
+            <input type="password" required="required" placeholder="Password" name="password"></input>  
+            <button class="but" type="submit">Sign up</button>  
+        </form>  
+        <br />
+        <form action="/judge.html" method="POST">
+            <button class="but1" type="submit">Return</button>
+        </form>
+        <br />
+        <div align="center">
+            <font size="4" color="red">This username is already registered, please try again</font>
+        </div>
+    </div>  
+</body>  
+</html>  

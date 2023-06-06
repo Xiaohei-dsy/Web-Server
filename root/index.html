@@ -1,0 +1,2631 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8"/>
+        <title>UMass ECE</title>
+        <script type="text/javascript">
+            (window.NREUM || (NREUM = {})).init = {
+                ajax: {
+                    deny_list: ["bam.nr-data.net"]
+                }
+            };
+            (window.NREUM || (NREUM = {})).loader_config = {
+                licenseKey: "NRJS-7ca6f9873b55d52ebdf",
+                applicationID: "1086172007"
+            };
+            ;(()=>{
+                "use strict";
+                var e, t, n = {
+                    8768: (e,t,n)=>{
+                        n.d(t, {
+                            T: ()=>r,
+                            p: ()=>i
+                        });
+                        const r = /(iPad|iPhone|iPod)/g.test(navigator.userAgent)
+                          , i = r && Boolean("undefined" == typeof SharedWorker)
+                    }
+                    ,
+                    27: (e,t,n)=>{
+                        n.d(t, {
+                            P_: ()=>h,
+                            Mt: ()=>p,
+                            C5: ()=>d,
+                            DL: ()=>w,
+                            OP: ()=>O,
+                            lF: ()=>R,
+                            Yu: ()=>A,
+                            Dg: ()=>v,
+                            CX: ()=>f,
+                            GE: ()=>y,
+                            sU: ()=>C
+                        });
+                        var r = {};
+                        n.r(r),
+                        n.d(r, {
+                            agent: ()=>x,
+                            match: ()=>k,
+                            version: ()=>_
+                        });
+                        var i = n(6797)
+                          , o = n(909)
+                          , a = n(8610);
+                        class s {
+                            constructor(e, t) {
+                                try {
+                                    if (!e || "object" != typeof e)
+                                        return (0,
+                                        a.Z)("New setting a Configurable requires an object as input");
+                                    if (!t || "object" != typeof t)
+                                        return (0,
+                                        a.Z)("Setting a Configurable requires a model to set its initial properties");
+                                    Object.assign(this, t),
+                                    Object.entries(e).forEach((e=>{
+                                        let[t,n] = e;
+                                        const r = (0,
+                                        o.q)(t);
+                                        r.length && n && "object" == typeof n && r.forEach((e=>{
+                                            e in n && ((0,
+                                            a.Z)('"'.concat(e, '" is a protected attribute and can not be changed in feature ').concat(t, ".  It will have no effect.")),
+                                            delete n[e])
+                                        }
+                                        )),
+                                        this[t] = n
+                                    }
+                                    ))
+                                } catch (e) {
+                                    (0,
+                                    a.Z)("An error occured while setting a Configurable", e)
+                                }
+                            }
+                        }
+                        const c = {
+                            beacon: i.ce.beacon,
+                            errorBeacon: i.ce.errorBeacon,
+                            licenseKey: void 0,
+                            applicationID: void 0,
+                            sa: void 0,
+                            queueTime: void 0,
+                            applicationTime: void 0,
+                            ttGuid: void 0,
+                            user: void 0,
+                            account: void 0,
+                            product: void 0,
+                            extra: void 0,
+                            jsAttributes: {},
+                            userAttributes: void 0,
+                            atts: void 0,
+                            transactionName: void 0,
+                            tNamePlain: void 0
+                        }
+                          , u = {};
+                        function d(e) {
+                            if (!e)
+                                throw new Error("All info objects require an agent identifier!");
+                            if (!u[e])
+                                throw new Error("Info for ".concat(e, " was never set"));
+                            return u[e]
+                        }
+                        function f(e, t) {
+                            if (!e)
+                                throw new Error("All info objects require an agent identifier!");
+                            u[e] = new s(t,c),
+                            (0,
+                            i.Qy)(e, u[e], "info")
+                        }
+                        const l = {
+                            allow_bfcache: !0,
+                            privacy: {
+                                cookies_enabled: !0
+                            },
+                            ajax: {
+                                deny_list: void 0,
+                                enabled: !0,
+                                harvestTimeSeconds: 10
+                            },
+                            distributed_tracing: {
+                                enabled: void 0,
+                                exclude_newrelic_header: void 0,
+                                cors_use_newrelic_header: void 0,
+                                cors_use_tracecontext_headers: void 0,
+                                allowed_origins: void 0
+                            },
+                            ssl: void 0,
+                            obfuscate: void 0,
+                            jserrors: {
+                                enabled: !0,
+                                harvestTimeSeconds: 10
+                            },
+                            metrics: {
+                                enabled: !0
+                            },
+                            page_action: {
+                                enabled: !0,
+                                harvestTimeSeconds: 30
+                            },
+                            page_view_event: {
+                                enabled: !0
+                            },
+                            page_view_timing: {
+                                enabled: !0,
+                                harvestTimeSeconds: 30,
+                                long_task: !1
+                            },
+                            session_trace: {
+                                enabled: !0,
+                                harvestTimeSeconds: 10
+                            },
+                            spa: {
+                                enabled: !0,
+                                harvestTimeSeconds: 10
+                            }
+                        }
+                          , g = {};
+                        function h(e) {
+                            if (!e)
+                                throw new Error("All configuration objects require an agent identifier!");
+                            if (!g[e])
+                                throw new Error("Configuration for ".concat(e, " was never set"));
+                            return g[e]
+                        }
+                        function v(e, t) {
+                            if (!e)
+                                throw new Error("All configuration objects require an agent identifier!");
+                            g[e] = new s(t,l),
+                            (0,
+                            i.Qy)(e, g[e], "config")
+                        }
+                        function p(e, t) {
+                            if (!e)
+                                throw new Error("All configuration objects require an agent identifier!");
+                            var n = h(e);
+                            if (n) {
+                                for (var r = t.split("."), i = 0; i < r.length - 1; i++)
+                                    if ("object" != typeof (n = n[r[i]]))
+                                        return;
+                                n = n[r[r.length - 1]]
+                            }
+                            return n
+                        }
+                        const m = {
+                            accountID: void 0,
+                            trustKey: void 0,
+                            agentID: void 0,
+                            licenseKey: void 0,
+                            applicationID: void 0,
+                            xpid: void 0
+                        }
+                          , b = {};
+                        function w(e) {
+                            if (!e)
+                                throw new Error("All loader-config objects require an agent identifier!");
+                            if (!b[e])
+                                throw new Error("LoaderConfig for ".concat(e, " was never set"));
+                            return b[e]
+                        }
+                        function y(e, t) {
+                            if (!e)
+                                throw new Error("All loader-config objects require an agent identifier!");
+                            b[e] = new s(t,m),
+                            (0,
+                            i.Qy)(e, b[e], "loader_config")
+                        }
+                        const A = (0,
+                        i.mF)().o;
+                        var x = null
+                          , _ = null;
+                        const j = /Version\/(\S+)\s+Safari/;
+                        if (navigator.userAgent) {
+                            var D = navigator.userAgent
+                              , E = D.match(j);
+                            E && -1 === D.indexOf("Chrome") && -1 === D.indexOf("Chromium") && (x = "Safari",
+                            _ = E[1])
+                        }
+                        function k(e, t) {
+                            if (!x)
+                                return !1;
+                            if (e !== x)
+                                return !1;
+                            if (!t)
+                                return !0;
+                            if (!_)
+                                return !1;
+                            for (var n = _.split("."), r = t.split("."), i = 0; i < r.length; i++)
+                                if (r[i] !== n[i])
+                                    return !1;
+                            return !0
+                        }
+                        var S = n(2400)
+                          , T = n(2374)
+                          , N = n(1651);
+                        const I = e=>({
+                            buildEnv: N.Re,
+                            bytesSent: {},
+                            customTransaction: void 0,
+                            disabled: !1,
+                            distMethod: N.gF,
+                            isolatedBacklog: !1,
+                            loaderType: void 0,
+                            maxBytes: 3e4,
+                            offset: Math.floor(T._A?.performance?.timeOrigin || T._A?.performance?.timing?.navigationStart || Date.now()),
+                            onerror: void 0,
+                            origin: "" + T._A.location,
+                            ptid: void 0,
+                            releaseIds: {},
+                            sessionId: 1 == p(e, "privacy.cookies_enabled") ? (0,
+                            S.Bj)() : null,
+                            xhrWrappable: "function" == typeof T._A.XMLHttpRequest?.prototype?.addEventListener,
+                            userAgent: r,
+                            version: N.q4
+                        })
+                          , P = {};
+                        function O(e) {
+                            if (!e)
+                                throw new Error("All runtime objects require an agent identifier!");
+                            if (!P[e])
+                                throw new Error("Runtime for ".concat(e, " was never set"));
+                            return P[e]
+                        }
+                        function C(e, t) {
+                            if (!e)
+                                throw new Error("All runtime objects require an agent identifier!");
+                            P[e] = new s(t,I(e)),
+                            (0,
+                            i.Qy)(e, P[e], "runtime")
+                        }
+                        function R(e) {
+                            return function(e) {
+                                try {
+                                    const t = d(e);
+                                    return !!t.licenseKey && !!t.errorBeacon && !!t.applicationID
+                                } catch (e) {
+                                    return !1
+                                }
+                            }(e)
+                        }
+                    }
+                    ,
+                    1651: (e,t,n)=>{
+                        n.d(t, {
+                            Re: ()=>i,
+                            gF: ()=>o,
+                            q4: ()=>r
+                        });
+                        const r = "1.231.0"
+                          , i = "PROD"
+                          , o = "CDN"
+                    }
+                    ,
+                    9557: (e,t,n)=>{
+                        n.d(t, {
+                            w: ()=>o
+                        });
+                        var r = n(8610);
+                        const i = {
+                            agentIdentifier: ""
+                        };
+                        class o {
+                            constructor(e) {
+                                try {
+                                    if ("object" != typeof e)
+                                        return (0,
+                                        r.Z)("shared context requires an object as input");
+                                    this.sharedContext = {},
+                                    Object.assign(this.sharedContext, i),
+                                    Object.entries(e).forEach((e=>{
+                                        let[t,n] = e;
+                                        Object.keys(i).includes(t) && (this.sharedContext[t] = n)
+                                    }
+                                    ))
+                                } catch (e) {
+                                    (0,
+                                    r.Z)("An error occured while setting SharedContext", e)
+                                }
+                            }
+                        }
+                    }
+                    ,
+                    4329: (e,t,n)=>{
+                        n.d(t, {
+                            L: ()=>d,
+                            R: ()=>c
+                        });
+                        var r = n(3752)
+                          , i = n(7022)
+                          , o = n(4045)
+                          , a = n(2325);
+                        const s = {};
+                        function c(e, t) {
+                            const n = {
+                                staged: !1,
+                                priority: a.p[t] || 0
+                            };
+                            u(e),
+                            s[e].get(t) || s[e].set(t, n)
+                        }
+                        function u(e) {
+                            e && (s[e] || (s[e] = new Map))
+                        }
+                        function d() {
+                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ""
+                              , t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "feature";
+                            if (u(e),
+                            !e || !s[e].get(t))
+                                return a(t);
+                            s[e].get(t).staged = !0;
+                            const n = Array.from(s[e]);
+                            function a(t) {
+                                const n = e ? r.ee.get(e) : r.ee
+                                  , a = o.X.handlers;
+                                if (n.backlog && a) {
+                                    var s = n.backlog[t]
+                                      , c = a[t];
+                                    if (c) {
+                                        for (var u = 0; s && u < s.length; ++u)
+                                            f(s[u], c);
+                                        (0,
+                                        i.D)(c, (function(e, t) {
+                                            (0,
+                                            i.D)(t, (function(t, n) {
+                                                n[0].on(e, n[1])
+                                            }
+                                            ))
+                                        }
+                                        ))
+                                    }
+                                    delete a[t],
+                                    n.backlog[t] = null,
+                                    n.emit("drain-" + t, [])
+                                }
+                            }
+                            n.every((e=>{
+                                let[t,n] = e;
+                                return n.staged
+                            }
+                            )) && (n.sort(((e,t)=>e[1].priority - t[1].priority)),
+                            n.forEach((e=>{
+                                let[t] = e;
+                                a(t)
+                            }
+                            )))
+                        }
+                        function f(e, t) {
+                            var n = e[1];
+                            (0,
+                            i.D)(t[n], (function(t, n) {
+                                var r = e[0];
+                                if (n[0] === r) {
+                                    var i = n[1]
+                                      , o = e[3]
+                                      , a = e[2];
+                                    i.apply(o, a)
+                                }
+                            }
+                            ))
+                        }
+                    }
+                    ,
+                    3752: (e,t,n)=>{
+                        n.d(t, {
+                            ee: ()=>u
+                        });
+                        var r = n(6797)
+                          , i = n(3916)
+                          , o = n(7022)
+                          , a = n(27)
+                          , s = "nr@context";
+                        let c = (0,
+                        r.fP)();
+                        var u;
+                        function d() {}
+                        function f() {
+                            return new d
+                        }
+                        function l() {
+                            u.aborted = !0,
+                            u.backlog = {}
+                        }
+                        c.ee ? u = c.ee : (u = function e(t, n) {
+                            var r = {}
+                              , c = {}
+                              , g = {}
+                              , h = !1;
+                            try {
+                                h = 16 === n.length && (0,
+                                a.OP)(n).isolatedBacklog
+                            } catch (e) {}
+                            var v = {
+                                on: b,
+                                addEventListener: b,
+                                removeEventListener: w,
+                                emit: m,
+                                get: A,
+                                listeners: y,
+                                context: p,
+                                buffer: x,
+                                abort: l,
+                                aborted: !1,
+                                isBuffering: _,
+                                debugId: n,
+                                backlog: h ? {} : t && "object" == typeof t.backlog ? t.backlog : {}
+                            };
+                            return v;
+                            function p(e) {
+                                return e && e instanceof d ? e : e ? (0,
+                                i.X)(e, s, f) : f()
+                            }
+                            function m(e, n, r, i, o) {
+                                if (!1 !== o && (o = !0),
+                                !u.aborted || i) {
+                                    t && o && t.emit(e, n, r);
+                                    for (var a = p(r), s = y(e), d = s.length, f = 0; f < d; f++)
+                                        s[f].apply(a, n);
+                                    var l = j()[c[e]];
+                                    return l && l.push([v, e, n, a]),
+                                    a
+                                }
+                            }
+                            function b(e, t) {
+                                r[e] = y(e).concat(t)
+                            }
+                            function w(e, t) {
+                                var n = r[e];
+                                if (n)
+                                    for (var i = 0; i < n.length; i++)
+                                        n[i] === t && n.splice(i, 1)
+                            }
+                            function y(e) {
+                                return r[e] || []
+                            }
+                            function A(t) {
+                                return g[t] = g[t] || e(v, t)
+                            }
+                            function x(e, t) {
+                                var n = j();
+                                v.aborted || (0,
+                                o.D)(e, (function(e, r) {
+                                    t = t || "feature",
+                                    c[r] = t,
+                                    t in n || (n[t] = [])
+                                }
+                                ))
+                            }
+                            function _(e) {
+                                return !!j()[c[e]]
+                            }
+                            function j() {
+                                return v.backlog
+                            }
+                        }(void 0, "globalEE"),
+                        c.ee = u)
+                    }
+                    ,
+                    9252: (e,t,n)=>{
+                        n.d(t, {
+                            E: ()=>r,
+                            p: ()=>i
+                        });
+                        var r = n(3752).ee.get("handle");
+                        function i(e, t, n, i, o) {
+                            o ? (o.buffer([e], i),
+                            o.emit(e, t, n)) : (r.buffer([e], i),
+                            r.emit(e, t, n))
+                        }
+                    }
+                    ,
+                    4045: (e,t,n)=>{
+                        n.d(t, {
+                            X: ()=>o
+                        });
+                        var r = n(9252);
+                        o.on = a;
+                        var i = o.handlers = {};
+                        function o(e, t, n, o) {
+                            a(o || r.E, i, e, t, n)
+                        }
+                        function a(e, t, n, i, o) {
+                            o || (o = "feature"),
+                            e || (e = r.E);
+                            var a = t[o] = t[o] || {};
+                            (a[n] = a[n] || []).push([e, i])
+                        }
+                    }
+                    ,
+                    8544: (e,t,n)=>{
+                        n.d(t, {
+                            bP: ()=>s,
+                            iz: ()=>c,
+                            m$: ()=>a
+                        });
+                        var r = n(2374);
+                        let i = !1
+                          , o = !1;
+                        try {
+                            const e = {
+                                get passive() {
+                                    return i = !0,
+                                    !1
+                                },
+                                get signal() {
+                                    return o = !0,
+                                    !1
+                                }
+                            };
+                            r._A.addEventListener("test", null, e),
+                            r._A.removeEventListener("test", null, e)
+                        } catch (e) {}
+                        function a(e, t) {
+                            return i || o ? {
+                                capture: !!e,
+                                passive: i,
+                                signal: t
+                            } : !!e
+                        }
+                        function s(e, t) {
+                            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                            window.addEventListener(e, t, a(n))
+                        }
+                        function c(e, t) {
+                            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                            document.addEventListener(e, t, a(n))
+                        }
+                    }
+                    ,
+                    5526: (e,t,n)=>{
+                        n.d(t, {
+                            Rl: ()=>a,
+                            ky: ()=>s
+                        });
+                        var r = n(2374);
+                        const i = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";
+                        function o(e, t) {
+                            return e ? 15 & e[t] : 16 * Math.random() | 0
+                        }
+                        function a() {
+                            const e = r._A?.crypto || r._A?.msCrypto;
+                            let t, n = 0;
+                            return e && e.getRandomValues && (t = e.getRandomValues(new Uint8Array(31))),
+                            i.split("").map((e=>"x" === e ? o(t, ++n).toString(16) : "y" === e ? (3 & o() | 8).toString(16) : e)).join("")
+                        }
+                        function s(e) {
+                            const t = r._A?.crypto || r._A?.msCrypto;
+                            let n, i = 0;
+                            t && t.getRandomValues && (n = t.getRandomValues(new Uint8Array(31)));
+                            const a = [];
+                            for (var s = 0; s < e; s++)
+                                a.push(o(n, ++i).toString(16));
+                            return a.join("")
+                        }
+                    }
+                    ,
+                    2053: (e,t,n)=>{
+                        function r() {
+                            return Math.round(performance.now())
+                        }
+                        n.d(t, {
+                            z: ()=>r
+                        })
+                    }
+                    ,
+                    8610: (e,t,n)=>{
+                        function r(e, t) {
+                            "function" == typeof console.warn && (console.warn("New Relic: ".concat(e)),
+                            t && console.warn(t))
+                        }
+                        n.d(t, {
+                            Z: ()=>r
+                        })
+                    }
+                    ,
+                    3916: (e,t,n)=>{
+                        n.d(t, {
+                            X: ()=>i
+                        });
+                        var r = Object.prototype.hasOwnProperty;
+                        function i(e, t, n) {
+                            if (r.call(e, t))
+                                return e[t];
+                            var i = n();
+                            if (Object.defineProperty && Object.keys)
+                                try {
+                                    return Object.defineProperty(e, t, {
+                                        value: i,
+                                        writable: !0,
+                                        enumerable: !1
+                                    }),
+                                    i
+                                } catch (e) {}
+                            return e[t] = i,
+                            i
+                        }
+                    }
+                    ,
+                    2374: (e,t,n)=>{
+                        n.d(t, {
+                            _A: ()=>o,
+                            il: ()=>r,
+                            v6: ()=>i
+                        });
+                        const r = Boolean("undefined" != typeof window && window.document)
+                          , i = Boolean("undefined" != typeof WorkerGlobalScope && self.navigator instanceof WorkerNavigator);
+                        let o = (()=>{
+                            if (r)
+                                return window;
+                            if (i) {
+                                if ("undefined" != typeof globalThis && globalThis instanceof WorkerGlobalScope)
+                                    return globalThis;
+                                if (self instanceof WorkerGlobalScope)
+                                    return self
+                            }
+                            throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like "self" and "window".')
+                        }
+                        )()
+                    }
+                    ,
+                    7022: (e,t,n)=>{
+                        n.d(t, {
+                            D: ()=>r
+                        });
+                        const r = (e,t)=>Object.entries(e || {}).map((e=>{
+                            let[n,r] = e;
+                            return t(n, r)
+                        }
+                        ))
+                    }
+                    ,
+                    2438: (e,t,n)=>{
+                        n.d(t, {
+                            P: ()=>o
+                        });
+                        var r = n(3752);
+                        const i = ()=>{
+                            const e = new WeakSet;
+                            return (t,n)=>{
+                                if ("object" == typeof n && null !== n) {
+                                    if (e.has(n))
+                                        return;
+                                    e.add(n)
+                                }
+                                return n
+                            }
+                        }
+                        ;
+                        function o(e) {
+                            try {
+                                return JSON.stringify(e, i())
+                            } catch (e) {
+                                try {
+                                    r.ee.emit("internal-error", [e])
+                                } catch (e) {}
+                            }
+                        }
+                    }
+                    ,
+                    2650: (e,t,n)=>{
+                        n.d(t, {
+                            K: ()=>a,
+                            b: ()=>o
+                        });
+                        var r = n(8544);
+                        function i() {
+                            return "undefined" == typeof document || "complete" === document.readyState
+                        }
+                        function o(e, t) {
+                            if (i())
+                                return e();
+                            (0,
+                            r.bP)("load", e, t)
+                        }
+                        function a(e) {
+                            if (i())
+                                return e();
+                            (0,
+                            r.iz)("DOMContentLoaded", e)
+                        }
+                    }
+                    ,
+                    6797: (e,t,n)=>{
+                        n.d(t, {
+                            EZ: ()=>u,
+                            Qy: ()=>c,
+                            ce: ()=>o,
+                            fP: ()=>a,
+                            gG: ()=>d,
+                            mF: ()=>s
+                        });
+                        var r = n(2053)
+                          , i = n(2374);
+                        const o = {
+                            beacon: "bam.nr-data.net",
+                            errorBeacon: "bam.nr-data.net"
+                        };
+                        function a() {
+                            return i._A.NREUM || (i._A.NREUM = {}),
+                            void 0 === i._A.newrelic && (i._A.newrelic = i._A.NREUM),
+                            i._A.NREUM
+                        }
+                        function s() {
+                            let e = a();
+                            return e.o || (e.o = {
+                                ST: i._A.setTimeout,
+                                SI: i._A.setImmediate,
+                                CT: i._A.clearTimeout,
+                                XHR: i._A.XMLHttpRequest,
+                                REQ: i._A.Request,
+                                EV: i._A.Event,
+                                PR: i._A.Promise,
+                                MO: i._A.MutationObserver,
+                                FETCH: i._A.fetch
+                            }),
+                            e
+                        }
+                        function c(e, t, n) {
+                            let i = a();
+                            const o = i.initializedAgents || {}
+                              , s = o[e] || {};
+                            return Object.keys(s).length || (s.initializedAt = {
+                                ms: (0,
+                                r.z)(),
+                                date: new Date
+                            }),
+                            i.initializedAgents = {
+                                ...o,
+                                [e]: {
+                                    ...s,
+                                    [n]: t
+                                }
+                            },
+                            i
+                        }
+                        function u(e, t) {
+                            a()[e] = t
+                        }
+                        function d() {
+                            return function() {
+                                let e = a();
+                                const t = e.info || {};
+                                e.info = {
+                                    beacon: o.beacon,
+                                    errorBeacon: o.errorBeacon,
+                                    ...t
+                                }
+                            }(),
+                            function() {
+                                let e = a();
+                                const t = e.init || {};
+                                e.init = {
+                                    ...t
+                                }
+                            }(),
+                            s(),
+                            function() {
+                                let e = a();
+                                const t = e.loader_config || {};
+                                e.loader_config = {
+                                    ...t
+                                }
+                            }(),
+                            a()
+                        }
+                    }
+                    ,
+                    6998: (e,t,n)=>{
+                        n.d(t, {
+                            N: ()=>i
+                        });
+                        var r = n(8544);
+                        function i(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                            return void (0,
+                            r.iz)("visibilitychange", (function() {
+                                if (t)
+                                    return void ("hidden" == document.visibilityState && e());
+                                e(document.visibilityState)
+                            }
+                            ))
+                        }
+                    }
+                    ,
+                    2400: (e,t,n)=>{
+                        n.d(t, {
+                            Bj: ()=>c,
+                            GD: ()=>s,
+                            J8: ()=>u,
+                            ju: ()=>o
+                        });
+                        var r = n(5526);
+                        const i = "NRBA/";
+                        function o(e, t) {
+                            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+                            try {
+                                return window.sessionStorage.setItem(i + n + e, t),
+                                !0
+                            } catch (e) {
+                                return !1
+                            }
+                        }
+                        function a(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            return window.sessionStorage.getItem(i + t + e)
+                        }
+                        function s(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            try {
+                                window.sessionStorage.removeItem(i + t + e)
+                            } catch (e) {}
+                        }
+                        function c() {
+                            try {
+                                let e;
+                                return null === (e = a("SESSION_ID")) && (e = (0,
+                                r.ky)(16),
+                                o("SESSION_ID", e)),
+                                e
+                            } catch (e) {
+                                return null
+                            }
+                        }
+                        function u() {
+                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+                            const t = i + e
+                              , n = {};
+                            try {
+                                for (let r = 0; r < window.sessionStorage.length; r++) {
+                                    let i = window.sessionStorage.key(r);
+                                    i.startsWith(t) && (i = i.slice(t.length),
+                                    n[i] = a(i, e))
+                                }
+                            } catch (e) {}
+                            return n
+                        }
+                    }
+                    ,
+                    6034: (e,t,n)=>{
+                        n.d(t, {
+                            gF: ()=>o,
+                            mY: ()=>i,
+                            t9: ()=>r,
+                            vz: ()=>s,
+                            xS: ()=>a
+                        });
+                        const r = n(2325).D.metrics
+                          , i = "sm"
+                          , o = "cm"
+                          , a = "storeSupportabilityMetrics"
+                          , s = "storeEventMetrics"
+                    }
+                    ,
+                    2484: (e,t,n)=>{
+                        n.d(t, {
+                            Dz: ()=>i,
+                            OJ: ()=>a,
+                            qw: ()=>o,
+                            t9: ()=>r
+                        });
+                        const r = n(2325).D.pageViewEvent
+                          , i = "firstbyte"
+                          , o = "domcontent"
+                          , a = "windowload"
+                    }
+                    ,
+                    6382: (e,t,n)=>{
+                        n.d(t, {
+                            t: ()=>r
+                        });
+                        const r = n(2325).D.pageViewTiming
+                    }
+                    ,
+                    1509: (e,t,n)=>{
+                        n.d(t, {
+                            W: ()=>s
+                        });
+                        var r = n(27)
+                          , i = n(3752)
+                          , o = n(2384)
+                          , a = n(6797);
+                        class s {
+                            constructor(e, t, n) {
+                                this.agentIdentifier = e,
+                                this.aggregator = t,
+                                this.ee = i.ee.get(e, (0,
+                                r.OP)(this.agentIdentifier).isolatedBacklog),
+                                this.featureName = n,
+                                this.blocked = !1,
+                                this.checkConfiguration()
+                            }
+                            checkConfiguration() {
+                                if (!(0,
+                                r.lF)(this.agentIdentifier)) {
+                                    let e = {
+                                        ...(0,
+                                        a.gG)().info?.jsAttributes
+                                    };
+                                    try {
+                                        e = {
+                                            ...e,
+                                            ...(0,
+                                            r.C5)(this.agentIdentifier)?.jsAttributes
+                                        }
+                                    } catch (e) {}
+                                    (0,
+                                    o.j)(this.agentIdentifier, {
+                                        ...(0,
+                                        a.gG)(),
+                                        info: {
+                                            ...(0,
+                                            a.gG)().info,
+                                            jsAttributes: e
+                                        }
+                                    })
+                                }
+                            }
+                        }
+                    }
+                    ,
+                    2384: (e,t,n)=>{
+                        n.d(t, {
+                            j: ()=>y
+                        });
+                        var r = n(2325)
+                          , i = n(27)
+                          , o = n(9252)
+                          , a = n(3752)
+                          , s = n(2053)
+                          , c = n(4329)
+                          , u = n(2650)
+                          , d = n(2374)
+                          , f = n(8610)
+                          , l = n(6034)
+                          , g = n(6797)
+                          , h = n(2400);
+                        const v = "CUSTOM/";
+                        function p() {
+                            const e = (0,
+                            g.gG)();
+                            ["setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease", "addPageAction", "setCurrentRouteName", "setPageViewName", "setCustomAttribute", "interaction", "noticeError", "setUserId"].forEach((t=>{
+                                e[t] = function() {
+                                    for (var n = arguments.length, r = new Array(n), i = 0; i < n; i++)
+                                        r[i] = arguments[i];
+                                    return function(t) {
+                                        for (var n = arguments.length, r = new Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++)
+                                            r[i - 1] = arguments[i];
+                                        let o = [];
+                                        return Object.values(e.initializedAgents).forEach((e=>{
+                                            e.exposed && e.api[t] && o.push(e.api[t](...r))
+                                        }
+                                        )),
+                                        o.length > 1 ? o : o[0]
+                                    }(t, ...r)
+                                }
+                            }
+                            ))
+                        }
+                        var m = n(7022);
+                        const b = {
+                            stn: [r.D.sessionTrace],
+                            err: [r.D.jserrors, r.D.metrics],
+                            ins: [r.D.pageAction],
+                            spa: [r.D.spa]
+                        };
+                        const w = {};
+                        function y(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+                              , y = arguments.length > 2 ? arguments[2] : void 0
+                              , A = arguments.length > 3 ? arguments[3] : void 0
+                              , {init: x, info: _, loader_config: j, runtime: D={
+                                loaderType: y
+                            }, exposed: E=!0} = t;
+                            const k = (0,
+                            g.gG)();
+                            if (_ || (x = k.init,
+                            _ = k.info,
+                            j = k.loader_config),
+                            _.jsAttributes ??= {},
+                            d.v6 && (_.jsAttributes.isWorker = !0),
+                            d.il) {
+                                let e = (0,
+                                h.J8)(v);
+                                Object.assign(_.jsAttributes, e)
+                            }
+                            (0,
+                            i.CX)(e, _),
+                            (0,
+                            i.Dg)(e, x || {}),
+                            (0,
+                            i.GE)(e, j || {}),
+                            (0,
+                            i.sU)(e, D),
+                            p();
+                            const S = function(e, t) {
+                                t || (0,
+                                c.R)(e, "api");
+                                const g = {};
+                                var p = a.ee.get(e)
+                                  , m = p.get("tracer")
+                                  , b = "api-"
+                                  , w = b + "ixn-";
+                                function y(t, n, r, o) {
+                                    const a = (0,
+                                    i.C5)(e);
+                                    return null === n ? (delete a.jsAttributes[t],
+                                    d.il && (0,
+                                    h.GD)(t, v)) : ((0,
+                                    i.CX)(e, {
+                                        ...a,
+                                        jsAttributes: {
+                                            ...a.jsAttributes,
+                                            [t]: n
+                                        }
+                                    }),
+                                    d.il && o && (0,
+                                    h.ju)(t, n, v)),
+                                    _(b, r, !0)()
+                                }
+                                function A() {}
+                                ["setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"].forEach((e=>g[e] = _(b, e, !0, "api"))),
+                                g.addPageAction = _(b, "addPageAction", !0, r.D.pageAction),
+                                g.setCurrentRouteName = _(b, "routeName", !0, r.D.spa),
+                                g.setPageViewName = function(t, n) {
+                                    if ("string" == typeof t)
+                                        return "/" !== t.charAt(0) && (t = "/" + t),
+                                        (0,
+                                        i.OP)(e).customTransaction = (n || "http://custom.transaction") + t,
+                                        _(b, "setPageViewName", !0)()
+                                }
+                                ,
+                                g.setCustomAttribute = function(e, t) {
+                                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                                    if ("string" == typeof e) {
+                                        if (["string", "number"].includes(typeof t) || null === t)
+                                            return y(e, t, "setCustomAttribute", n);
+                                        (0,
+                                        f.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t, "> was provided."))
+                                    } else
+                                        (0,
+                                        f.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e, "> was provided."))
+                                }
+                                ,
+                                g.setUserId = function(e) {
+                                    if ("string" == typeof e || null === e)
+                                        return y("enduser.id", e, "setUserId", !0);
+                                    (0,
+                                    f.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e, "> was provided."))
+                                }
+                                ,
+                                g.interaction = function() {
+                                    return (new A).get()
+                                }
+                                ;
+                                var x = A.prototype = {
+                                    createTracer: function(e, t) {
+                                        var n = {}
+                                          , i = this
+                                          , a = "function" == typeof t;
+                                        return (0,
+                                        o.p)(w + "tracer", [(0,
+                                        s.z)(), e, n], i, r.D.spa, p),
+                                        function() {
+                                            if (m.emit((a ? "" : "no-") + "fn-start", [(0,
+                                            s.z)(), i, a], n),
+                                            a)
+                                                try {
+                                                    return t.apply(this, arguments)
+                                                } catch (e) {
+                                                    throw m.emit("fn-err", [arguments, this, "string" == typeof e ? new Error(e) : e], n),
+                                                    e
+                                                } finally {
+                                                    m.emit("fn-end", [(0,
+                                                    s.z)()], n)
+                                                }
+                                        }
+                                    }
+                                };
+                                function _(e, t, n, i) {
+                                    return function() {
+                                        return (0,
+                                        o.p)(l.xS, ["API/" + t + "/called"], void 0, r.D.metrics, p),
+                                        i && (0,
+                                        o.p)(e + t, [(0,
+                                        s.z)(), ...arguments], n ? null : this, i, p),
+                                        n ? void 0 : this
+                                    }
+                                }
+                                function j() {
+                                    n.e(439).then(n.bind(n, 5692)).then((t=>{
+                                        let {setAPI: n} = t;
+                                        n(e),
+                                        (0,
+                                        c.L)(e, "api")
+                                    }
+                                    )).catch((()=>(0,
+                                    f.Z)("Downloading runtime APIs failed...")))
+                                }
+                                return ["actionText", "setName", "setAttribute", "save", "ignore", "onEnd", "getContext", "end", "get"].forEach((e=>{
+                                    x[e] = _(w, e, void 0, r.D.spa)
+                                }
+                                )),
+                                g.noticeError = function(e, t) {
+                                    "string" == typeof e && (e = new Error(e)),
+                                    (0,
+                                    o.p)(l.xS, ["API/noticeError/called"], void 0, r.D.metrics, p),
+                                    (0,
+                                    o.p)("err", [e, (0,
+                                    s.z)(), !1, t], void 0, r.D.jserrors, p)
+                                }
+                                ,
+                                d.v6 ? j() : (0,
+                                u.b)((()=>j()), !0),
+                                g
+                            }(e, A);
+                            return (0,
+                            g.Qy)(e, S, "api"),
+                            (0,
+                            g.Qy)(e, E, "exposed"),
+                            (0,
+                            g.EZ)("activatedFeatures", w),
+                            (0,
+                            g.EZ)("setToken", (t=>function(e, t) {
+                                var n = a.ee.get(t);
+                                e && "object" == typeof e && ((0,
+                                m.D)(e, (function(e, t) {
+                                    if (!t)
+                                        return (b[e] || []).forEach((t=>{
+                                            (0,
+                                            o.p)("block-" + e, [], void 0, t, n)
+                                        }
+                                        ));
+                                    w[e] || ((0,
+                                    o.p)("feat-" + e, [], void 0, b[e], n),
+                                    w[e] = !0)
+                                }
+                                )),
+                                (0,
+                                c.L)(t, r.D.pageViewEvent))
+                            }(t, e))),
+                            S
+                        }
+                    }
+                    ,
+                    909: (e,t,n)=>{
+                        n.d(t, {
+                            Z: ()=>i,
+                            q: ()=>o
+                        });
+                        var r = n(2325);
+                        function i(e) {
+                            switch (e) {
+                            case r.D.ajax:
+                                return [r.D.jserrors];
+                            case r.D.sessionTrace:
+                                return [r.D.ajax, r.D.pageViewEvent];
+                            case r.D.pageViewTiming:
+                                return [r.D.pageViewEvent];
+                            default:
+                                return []
+                            }
+                        }
+                        function o(e) {
+                            return e === r.D.jserrors ? [] : ["auto"]
+                        }
+                    }
+                    ,
+                    2325: (e,t,n)=>{
+                        n.d(t, {
+                            D: ()=>r,
+                            p: ()=>i
+                        });
+                        const r = {
+                            ajax: "ajax",
+                            jserrors: "jserrors",
+                            metrics: "metrics",
+                            pageAction: "page_action",
+                            pageViewEvent: "page_view_event",
+                            pageViewTiming: "page_view_timing",
+                            sessionTrace: "session_trace",
+                            spa: "spa"
+                        }
+                          , i = {
+                            [r.pageViewEvent]: 1,
+                            [r.pageViewTiming]: 2,
+                            [r.metrics]: 3,
+                            [r.jserrors]: 4,
+                            [r.ajax]: 5,
+                            [r.sessionTrace]: 6,
+                            [r.pageAction]: 7,
+                            [r.spa]: 8
+                        }
+                    }
+                }, r = {};
+                function i(e) {
+                    var t = r[e];
+                    if (void 0 !== t)
+                        return t.exports;
+                    var o = r[e] = {
+                        exports: {}
+                    };
+                    return n[e](o, o.exports, i),
+                    o.exports
+                }
+                i.m = n,
+                i.n = e=>{
+                    var t = e && e.__esModule ? ()=>e.default : ()=>e;
+                    return i.d(t, {
+                        a: t
+                    }),
+                    t
+                }
+                ,
+                i.d = (e,t)=>{
+                    for (var n in t)
+                        i.o(t, n) && !i.o(e, n) && Object.defineProperty(e, n, {
+                            enumerable: !0,
+                            get: t[n]
+                        })
+                }
+                ,
+                i.f = {},
+                i.e = e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e, t),
+                t)), [])),
+                i.u = e=>(({
+                    78: "page_action-aggregate",
+                    147: "metrics-aggregate",
+                    193: "session_trace-aggregate",
+                    317: "jserrors-aggregate",
+                    348: "page_view_timing-aggregate",
+                    439: "async-api",
+                    729: "lazy-loader",
+                    786: "page_view_event-aggregate",
+                    873: "spa-aggregate",
+                    898: "ajax-aggregate"
+                }[e] || e) + "." + {
+                    78: "42c392aa",
+                    147: "78efb4d5",
+                    193: "0938abd3",
+                    317: "0b4d6623",
+                    348: "a30a53ff",
+                    439: "8f89c105",
+                    729: "67423d16",
+                    786: "8cf0450e",
+                    862: "04af29e3",
+                    873: "19ebdf8d",
+                    898: "b0da4738"
+                }[e] + "-1.231.0.min.js"),
+                i.o = (e,t)=>Object.prototype.hasOwnProperty.call(e, t),
+                e = {},
+                t = "NRBA:",
+                i.l = (n,r,o,a)=>{
+                    if (e[n])
+                        e[n].push(r);
+                    else {
+                        var s, c;
+                        if (void 0 !== o)
+                            for (var u = document.getElementsByTagName("script"), d = 0; d < u.length; d++) {
+                                var f = u[d];
+                                if (f.getAttribute("src") == n || f.getAttribute("data-webpack") == t + o) {
+                                    s = f;
+                                    break
+                                }
+                            }
+                        s || (c = !0,
+                        (s = document.createElement("script")).charset = "utf-8",
+                        s.timeout = 120,
+                        i.nc && s.setAttribute("nonce", i.nc),
+                        s.setAttribute("data-webpack", t + o),
+                        s.src = n),
+                        e[n] = [r];
+                        var l = (t,r)=>{
+                            s.onerror = s.onload = null,
+                            clearTimeout(g);
+                            var i = e[n];
+                            if (delete e[n],
+                            s.parentNode && s.parentNode.removeChild(s),
+                            i && i.forEach((e=>e(r))),
+                            t)
+                                return t(r)
+                        }
+                          , g = setTimeout(l.bind(null, void 0, {
+                            type: "timeout",
+                            target: s
+                        }), 12e4);
+                        s.onerror = l.bind(null, s.onerror),
+                        s.onload = l.bind(null, s.onload),
+                        c && document.head.appendChild(s)
+                    }
+                }
+                ,
+                i.r = e=>{
+                    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                        value: "Module"
+                    }),
+                    Object.defineProperty(e, "__esModule", {
+                        value: !0
+                    })
+                }
+                ,
+                i.p = "https://js-agent.newrelic.com/",
+                (()=>{
+                    var e = {
+                        155: 0,
+                        591: 0
+                    };
+                    i.f.j = (t,n)=>{
+                        var r = i.o(e, t) ? e[t] : void 0;
+                        if (0 !== r)
+                            if (r)
+                                n.push(r[2]);
+                            else {
+                                var o = new Promise(((n,i)=>r = e[t] = [n, i]));
+                                n.push(r[2] = o);
+                                var a = i.p + i.u(t)
+                                  , s = new Error;
+                                i.l(a, (n=>{
+                                    if (i.o(e, t) && (0 !== (r = e[t]) && (e[t] = void 0),
+                                    r)) {
+                                        var o = n && ("load" === n.type ? "missing" : n.type)
+                                          , a = n && n.target && n.target.src;
+                                        s.message = "Loading chunk " + t + " failed.\n(" + o + ": " + a + ")",
+                                        s.name = "ChunkLoadError",
+                                        s.type = o,
+                                        s.request = a,
+                                        r[1](s)
+                                    }
+                                }
+                                ), "chunk-" + t, t)
+                            }
+                    }
+                    ;
+                    var t = (t,n)=>{
+                        var r, o, [a,s,c] = n, u = 0;
+                        if (a.some((t=>0 !== e[t]))) {
+                            for (r in s)
+                                i.o(s, r) && (i.m[r] = s[r]);
+                            if (c)
+                                c(i)
+                        }
+                        for (t && t(n); u < a.length; u++)
+                            o = a[u],
+                            i.o(e, o) && e[o] && e[o][0](),
+                            e[o] = 0
+                    }
+                      , n = window.webpackChunkNRBA = window.webpackChunkNRBA || [];
+                    n.forEach(t.bind(null, 0)),
+                    n.push = t.bind(null, n.push.bind(n))
+                }
+                )();
+                var o = {};
+                (()=>{
+                    i.r(o);
+                    var e = i(2325)
+                      , t = i(27);
+                    const n = Object.values(e.D);
+                    function r(e) {
+                        const r = {};
+                        return n.forEach((n=>{
+                            r[n] = function(e, n) {
+                                return !1 !== (0,
+                                t.Mt)(n, "".concat(e, ".enabled"))
+                            }(n, e)
+                        }
+                        )),
+                        r
+                    }
+                    var a = i(2384)
+                      , s = i(909)
+                      , c = i(9252)
+                      , u = i(8768)
+                      , d = i(4329)
+                      , f = i(1509)
+                      , l = i(2650)
+                      , g = i(2374)
+                      , h = i(8610);
+                    class v extends f.W {
+                        constructor(e, t, n) {
+                            let r = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+                            super(e, t, n),
+                            this.hasAggregator = !1,
+                            this.auto = r,
+                            this.abortHandler,
+                            r && (0,
+                            d.R)(e, n)
+                        }
+                        importAggregator() {
+                            if (this.hasAggregator || !this.auto)
+                                return;
+                            this.hasAggregator = !0;
+                            const e = async()=>{
+                                try {
+                                    const {lazyLoader: e} = await i.e(729).then(i.bind(i, 8110))
+                                      , {Aggregate: t} = await e(this.featureName, "aggregate");
+                                    new t(this.agentIdentifier,this.aggregator)
+                                } catch (e) {
+                                    (0,
+                                    h.Z)("Downloading ".concat(this.featureName, " failed...")),
+                                    this.abortHandler?.()
+                                }
+                            }
+                            ;
+                            g.v6 ? e() : (0,
+                            l.b)((()=>e()), !0)
+                        }
+                    }
+                    var p = i(2484)
+                      , m = i(2053);
+                    class b extends v {
+                        static featureName = p.t9;
+                        constructor(n, r) {
+                            let i = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                            if (super(n, r, p.t9, i),
+                            ("undefined" == typeof PerformanceNavigationTiming || u.T) && "undefined" != typeof PerformanceTiming) {
+                                const r = (0,
+                                t.OP)(n);
+                                r[p.Dz] = Math.max(Date.now() - r.offset, 0),
+                                (0,
+                                l.K)((()=>r[p.qw] = Math.max((0,
+                                m.z)() - r[p.Dz], 0))),
+                                (0,
+                                l.b)((()=>{
+                                    const t = (0,
+                                    m.z)();
+                                    r[p.OJ] = Math.max(t - r[p.Dz], 0),
+                                    (0,
+                                    c.p)("timing", ["load", t], void 0, e.D.pageViewTiming, this.ee)
+                                }
+                                ))
+                            }
+                            this.importAggregator()
+                        }
+                    }
+                    var w = i(9557)
+                      , y = i(7022);
+                    class A extends w.w {
+                        constructor(e) {
+                            super(e),
+                            this.aggregatedData = {}
+                        }
+                        store(e, t, n, r, i) {
+                            var o = this.getBucket(e, t, n, i);
+                            return o.metrics = function(e, t) {
+                                t || (t = {
+                                    count: 0
+                                });
+                                return t.count += 1,
+                                (0,
+                                y.D)(e, (function(e, n) {
+                                    t[e] = x(n, t[e])
+                                }
+                                )),
+                                t
+                            }(r, o.metrics),
+                            o
+                        }
+                        merge(e, t, n, r, i) {
+                            var o = this.getBucket(e, t, r, i);
+                            if (o.metrics) {
+                                var a = o.metrics;
+                                a.count += n.count,
+                                (0,
+                                y.D)(n, (function(e, t) {
+                                    if ("count" !== e) {
+                                        var r = a[e]
+                                          , i = n[e];
+                                        i && !i.c ? a[e] = x(i.t, r) : a[e] = function(e, t) {
+                                            if (!t)
+                                                return e;
+                                            t.c || (t = _(t.t));
+                                            return t.min = Math.min(e.min, t.min),
+                                            t.max = Math.max(e.max, t.max),
+                                            t.t += e.t,
+                                            t.sos += e.sos,
+                                            t.c += e.c,
+                                            t
+                                        }(i, a[e])
+                                    }
+                                }
+                                ))
+                            } else
+                                o.metrics = n
+                        }
+                        storeMetric(e, t, n, r) {
+                            var i = this.getBucket(e, t, n);
+                            return i.stats = x(r, i.stats),
+                            i
+                        }
+                        getBucket(e, t, n, r) {
+                            this.aggregatedData[e] || (this.aggregatedData[e] = {});
+                            var i = this.aggregatedData[e][t];
+                            return i || (i = this.aggregatedData[e][t] = {
+                                params: n || {}
+                            },
+                            r && (i.custom = r)),
+                            i
+                        }
+                        get(e, t) {
+                            return t ? this.aggregatedData[e] && this.aggregatedData[e][t] : this.aggregatedData[e]
+                        }
+                        take(e) {
+                            for (var t = {}, n = "", r = !1, i = 0; i < e.length; i++)
+                                t[n = e[i]] = j(this.aggregatedData[n]),
+                                t[n].length && (r = !0),
+                                delete this.aggregatedData[n];
+                            return r ? t : null
+                        }
+                    }
+                    function x(e, t) {
+                        return null == e ? function(e) {
+                            e ? e.c++ : e = {
+                                c: 1
+                            };
+                            return e
+                        }(t) : t ? (t.c || (t = _(t.t)),
+                        t.c += 1,
+                        t.t += e,
+                        t.sos += e * e,
+                        e > t.max && (t.max = e),
+                        e < t.min && (t.min = e),
+                        t) : {
+                            t: e
+                        }
+                    }
+                    function _(e) {
+                        return {
+                            t: e,
+                            min: e,
+                            max: e,
+                            sos: e * e,
+                            c: 1
+                        }
+                    }
+                    function j(e) {
+                        return "object" != typeof e ? [] : (0,
+                        y.D)(e, D)
+                    }
+                    function D(e, t) {
+                        return t
+                    }
+                    var E = i(6797)
+                      , k = i(5526)
+                      , S = i(2438);
+                    var T = i(6998)
+                      , N = i(8544)
+                      , I = i(6382);
+                    class P extends v {
+                        static featureName = I.t;
+                        constructor(e, n) {
+                            let r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                            super(e, n, I.t, r),
+                            g.il && ((0,
+                            t.OP)(e).initHidden = Boolean("hidden" === document.visibilityState),
+                            (0,
+                            T.N)((()=>(0,
+                            c.p)("docHidden", [(0,
+                            m.z)()], void 0, I.t, this.ee)), !0),
+                            (0,
+                            N.bP)("pagehide", (()=>(0,
+                            c.p)("winPagehide", [(0,
+                            m.z)()], void 0, I.t, this.ee))),
+                            this.importAggregator())
+                        }
+                    }
+                    const O = Boolean(g._A?.Worker)
+                      , C = Boolean(g._A?.SharedWorker)
+                      , R = Boolean(g._A?.navigator?.serviceWorker);
+                    let B, M, z;
+                    var q = i(6034);
+                    class W extends v {
+                        static featureName = q.t9;
+                        constructor(t, n) {
+                            let r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                            super(t, n, q.t9, r),
+                            function(e) {
+                                if (!B) {
+                                    if (O) {
+                                        B = Worker;
+                                        try {
+                                            g._A.Worker = n(B, "Dedicated")
+                                        } catch (e) {
+                                            o(e, "Dedicated")
+                                        }
+                                        if (C) {
+                                            M = SharedWorker;
+                                            try {
+                                                g._A.SharedWorker = n(M, "Shared")
+                                            } catch (e) {
+                                                o(e, "Shared")
+                                            }
+                                        } else
+                                            r("Shared");
+                                        if (R) {
+                                            z = navigator.serviceWorker.register;
+                                            try {
+                                                g._A.navigator.serviceWorker.register = (t = z,
+                                                function() {
+                                                    for (var e = arguments.length, n = new Array(e), r = 0; r < e; r++)
+                                                        n[r] = arguments[r];
+                                                    return i("Service", n[1]?.type),
+                                                    t.apply(navigator.serviceWorker, n)
+                                                }
+                                                )
+                                            } catch (e) {
+                                                o(e, "Service")
+                                            }
+                                        } else
+                                            r("Service");
+                                        var t;
+                                        return
+                                    }
+                                    r("All")
+                                }
+                                function n(e, t) {
+                                    return "undefined" == typeof Proxy ? e : new Proxy(e,{
+                                        construct: (e,n)=>(i(t, n[1]?.type),
+                                        new e(...n))
+                                    })
+                                }
+                                function r(t) {
+                                    g.v6 || e("Workers/".concat(t, "/Unavailable"))
+                                }
+                                function i(t, n) {
+                                    e("Workers/".concat(t, "module" === n ? "/Module" : "/Classic"))
+                                }
+                                function o(t, n) {
+                                    e("Workers/".concat(n, "/SM/Unsupported")),
+                                    (0,
+                                    h.Z)("NR Agent: Unable to capture ".concat(n, " workers."), t)
+                                }
+                            }((t=>(0,
+                            c.p)(q.xS, [t], void 0, e.D.metrics, this.ee))),
+                            this.importAggregator()
+                        }
+                    }
+                    new class {
+                        constructor(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0,
+                            k.ky)(16);
+                            this.agentIdentifier = t,
+                            this.sharedAggregator = new A({
+                                agentIdentifier: this.agentIdentifier
+                            }),
+                            this.features = {},
+                            this.desiredFeatures = new Set(e.features || []),
+                            this.desiredFeatures.add(b),
+                            Object.assign(this, (0,
+                            a.j)(this.agentIdentifier, e, e.loaderType || "agent")),
+                            this.start()
+                        }
+                        get config() {
+                            return {
+                                info: (0,
+                                t.C5)(this.agentIdentifier),
+                                init: (0,
+                                t.P_)(this.agentIdentifier),
+                                loader_config: (0,
+                                t.DL)(this.agentIdentifier),
+                                runtime: (0,
+                                t.OP)(this.agentIdentifier)
+                            }
+                        }
+                        start() {
+                            const t = "features";
+                            try {
+                                const n = r(this.agentIdentifier)
+                                  , i = Array.from(this.desiredFeatures);
+                                i.sort(((t,n)=>e.p[t.featureName] - e.p[n.featureName])),
+                                i.forEach((t=>{
+                                    if (n[t.featureName] || t.featureName === e.D.pageViewEvent) {
+                                        const e = (0,
+                                        s.Z)(t.featureName);
+                                        e.every((e=>n[e])) || (0,
+                                        h.Z)("".concat(t.featureName, " is enabled but one or more dependent features has been disabled (").concat((0,
+                                        S.P)(e), "). This may cause unintended consequences or missing data...")),
+                                        this.features[t.featureName] = new t(this.agentIdentifier,this.sharedAggregator)
+                                    }
+                                }
+                                )),
+                                (0,
+                                E.Qy)(this.agentIdentifier, this.features, t)
+                            } catch (e) {
+                                (0,
+                                h.Z)("Failed to initialize all enabled instrument classes (agent aborted) -", e);
+                                for (const e in this.features)
+                                    this.features[e].abortHandler?.();
+                                const n = (0,
+                                E.fP)();
+                                return delete n.initializedAgents[this.agentIdentifier]?.api,
+                                delete n.initializedAgents[this.agentIdentifier]?.[t],
+                                delete this.sharedAggregator,
+                                n.ee?.abort(),
+                                delete n.ee?.get(this.agentIdentifier),
+                                !1
+                            }
+                        }
+                    }
+                    ({
+                        features: [b, P, W],
+                        loaderType: "lite"
+                    })
+                }
+                )(),
+                window.NRBA = o
+            }
+            )();
+        </script>
+        <noscript>
+            <style>
+                form.antibot * :not(.antibot-message) {
+                    display: none !important;
+                }
+            </style>
+        </noscript>
+        <link rel="canonical" href="https://www.umass.edu/engineering/academics/departments/electrical-and-computer-engineering"/>
+        <meta name="Generator" content="Drupal 9 (https://www.drupal.org)"/>
+        <meta name="MobileOptimized" content="width"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="/engineering/themes/custom/webeco_theme/favicon.ico" type="image/vnd.microsoft.icon"/>
+        <script src="/engineering/sites/g/files/ijdqth166/files/google_tag/google_tag/google_tag.script.js?rtzip8" defer></script>
+        <title>Electrical and Computer Engineering : College of Engineering : UMass Amherst</title>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/ajax-progress.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/align.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/autocomplete-loading.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/fieldgroup.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/container-inline.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/clearfix.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/details.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/hidden.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/item-list.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/js.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/nowrap.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/position-container.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/progress.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/reset-appearance.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/resize.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/sticky-header.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/system-status-counter.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/system-status-report-counters.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/system-status-report-general-info.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/tabledrag.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/tablesort.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/system/components/tree-child.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/modules/contrib/responsive_table_filter/css/responsive-table-filter.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/views/views.module.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/media/oembed.formatter.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="//www.umass.edu/static/branding/css/styles.css"/>
+        <link rel="stylesheet" media="all" href="/engineering/modules/contrib/extlink/extlink.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/modules/contrib/paragraphs/css/paragraphs.unpublished.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/core/assets/vendor/normalize-css/normalize.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/core/themes/stable9/css/core/normalize-fixes.css?rtzip8"/>
+        <link rel="stylesheet" media="all" href="/engineering/themes/custom/webeco_theme/src/styles.css?rtzip8"/>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/fontawesome.js" defer crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/solid.js" defer crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/regular.js" defer crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/v4-shims.js" defer crossorigin="anonymous"></script>
+        <script src="//www.umass.edu/static/branding/js/umass_header.js"></script>
+    </head>
+    <body class="path-taxonomy">
+        <a href="#main-content" class="visually-hidden focusable skip-link">Skip to main content
+    </a>
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZKZB3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <div id="umass--global--header">
+            <div id="container">
+                <a id="wordmark" class="ir" href="https://www.umass.edu/" title="UMass Amherst">The University of Massachusetts Amherst</a>
+                <nav id="umass--global--navigation">
+                    <button aria-label="Open UMass Global Links Menu" id="umass--global--navigation--navicon" class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                        <span class="umass--global--navigation--navicon--label">Open UMass Global Links Menu</span>
+                    </button>
+                    <ul id="umass--global--navigation--links">
+                        <li>
+                            <a href="https://www.umass.edu/admissions/undergraduate-admissions/visit" id="umass--global--visit">Visit</a>
+                        </li>
+                        <li>
+                            <a href="https://www.umass.edu/admissions" id="umass--global--apply">Apply</a>
+                        </li>
+                        <li>
+                            <a href="https://www.umass.edu/give" id="umass--global--give">Give</a>
+                        </li>
+                        <li>
+                            <a href="https://www.umass.edu/search" id="umass--global--search">Search UMass.edu</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+            <header class="header__wrapper" role="banner">
+                <a class="site-name site-name--academic" href="/engineering/" rel="home">College of Engineering</a>
+                <button id="main-menu-toggle" class="main-navigation__control" aria-label="Toggle main menu" aria-expanded="false" aria-controls="main-menu">
+                    <span class="main-navigation__hamburger">
+                        <div class="main-navigation__hamburger-icon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </span>
+                    <span class="main-navigation__close"></span>
+                </button>
+                <nav role="navigation" aria-labelledby="block-mainmenu-menu" id="main-nav" class="block block-menu navigation menu--c0eab22b-53d7-499d-a480-340eec6d5825 main-navigation main-navigation--closed">
+                    <div class="main-navigation__contextual-wrapper">
+                        <h2 class="visually-hidden" id="block-mainmenu-menu">Main navigation</h2>
+                    </div>
+                    <ul role="menu" id="main-menu" aria-labelledby="main-menu-toggle" class="main-navigation__menu">
+                        <li role="presentation" class="menu-section menu-section--default main-navigation__item main-navigation__level-0 main-navigation__item--dropdown">
+                            <div class="main-navigation__level-0-content">
+                                <a href="/engineering/academics" class="main-navigation__menu-link" role="menuitem">Academics</a>
+                                <div class="main-navigation__arrow">
+                                    <button class="main-navigation__submenu-toggle" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle submenu for Academics</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="main-navigation__submenu main-navigation__submenu--has-level2 main-navigation__submenu--has-heading">
+                                <div class="main-navigation__level-1">
+                                    <h3 class="main-navigation__submenu-heading">Academic programs
+            </h3>
+                                    <div class="main-navigation__level-1-content">
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/academics/programs/degrees/level-study/undergraduate" class="main-navigation__menu-link" role="menuitem">Undergraduate programs</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/academics/programs/degrees/level-study/graduate" class="main-navigation__menu-link" role="menuitem">Graduate programs</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/academics/accelerated-masters" class="main-navigation__menu-link" role="menuitem">4+1 Accelerated MS programs</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/academics/programs/degrees/degree-type/certificate" class="main-navigation__menu-link" role="menuitem">Certificate programs</a>
+                                        </span>
+                                    </div>
+                                    <div class="main-navigation__see-all">
+                                        <a href="/engineering/academics/programs">See all academic programs</a>
+                                    </div>
+                                </div>
+                                <div class="main-navigation__level-2">
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="https://www.umass.edu/admissions" class="main-navigation__menu-link" role="menuitem">Admissions</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="https://www.umass.edu/financialaid" class="main-navigation__menu-link" role="menuitem">Tuition &amp;financial aid</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/office-student-affairs" class="main-navigation__menu-link" role="menuitem">Academic advising</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/career-center" class="main-navigation__menu-link" role="menuitem">Careers &amp;experiential learning</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/study-abroad-engineers" class="main-navigation__menu-link" role="menuitem">Study abroad for engineers</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li role="presentation" class="menu-section menu-section--default main-navigation__item main-navigation__level-0 main-navigation__item--dropdown">
+                            <div class="main-navigation__level-0-content">
+                                <a href="/engineering/research" class="main-navigation__menu-link" role="menuitem">Research</a>
+                                <div class="main-navigation__arrow">
+                                    <button class="main-navigation__submenu-toggle" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle submenu for Research</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="main-navigation__submenu main-navigation__submenu--has-level2">
+                                <div class="main-navigation__level-1">
+                                    <div class="main-navigation__level-1-content">
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/organizations" class="main-navigation__menu-link" role="menuitem">Research centers, institutes, and programs</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/research/themes" class="main-navigation__menu-link" role="menuitem">Research areas</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/research/undergraduate-research" class="main-navigation__menu-link" role="menuitem">Undergraduate research</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/news?s=&amp;field_category_target_id%5B326%5D=326" class="main-navigation__menu-link" role="menuitem">Research news &amp;highlights</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/innovation-and-entrepreneurship" class="main-navigation__menu-link" role="menuitem">Innovation and Entreprenurship</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="main-navigation__level-2">
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/research/research-development-services-rds" class="main-navigation__menu-link" role="menuitem">Research development services</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="https://www.umass.edu/ials/core-facilities" class="main-navigation__menu-link" role="menuitem">Core facilities</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="https://www.umass.edu/ials/" class="main-navigation__menu-link" role="menuitem">Institute for Applied Life Sciences</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li role="presentation" class="menu-section menu-section--default main-navigation__item main-navigation__level-0 main-navigation__item--dropdown">
+                            <div class="main-navigation__level-0-content">
+                                <a href="/engineering/community" class="main-navigation__menu-link" role="menuitem">Community</a>
+                                <div class="main-navigation__arrow">
+                                    <button class="main-navigation__submenu-toggle" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle submenu for Community</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="main-navigation__submenu main-navigation__submenu--2cols">
+                                <div class="main-navigation__level-1">
+                                    <div class="main-navigation__level-1-content">
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/dei" class="main-navigation__menu-link" role="menuitem">Office of Diversity, Equity, and Inclusion</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/student-organizations" class="main-navigation__menu-link" role="menuitem">Student Organizations</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/student-organizations/makerspaces" class="main-navigation__menu-link" role="menuitem">Makerspaces</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/industry-partnership-program" class="main-navigation__menu-link" role="menuitem">Industry Partnership Program</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/advisory-councils-and-boards" class="main-navigation__menu-link" role="menuitem">Advisory Boards and Councils</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/invited-lectures" class="main-navigation__menu-link" role="menuitem">Invited Lectures</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/community/awards-programs" class="main-navigation__menu-link" role="menuitem">Awards Programs</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/give-engineering" class="main-navigation__menu-link" role="menuitem">Give to Engineering</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li role="presentation" class="menu-section menu-section--default main-navigation__item main-navigation__level-0 main-navigation__item--dropdown">
+                            <div class="main-navigation__level-0-content">
+                                <a href="/engineering/about" class="main-navigation__menu-link" role="menuitem">About</a>
+                                <div class="main-navigation__arrow">
+                                    <button class="main-navigation__submenu-toggle" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle submenu for About</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="main-navigation__submenu main-navigation__submenu--2cols main-navigation__submenu--has-level2">
+                                <div class="main-navigation__level-1">
+                                    <div class="main-navigation__level-1-content">
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/about/mission-vision-and-inclusivity-statement" class="main-navigation__menu-link" role="menuitem">Mission, vision &amp;inclusivity statement</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/departments" class="main-navigation__menu-link" role="menuitem">Departments</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/about/directory" class="main-navigation__menu-link" role="menuitem">Faculty &amp;Staff</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/about/faculty-achievements" class="main-navigation__menu-link" role="menuitem">Faculty Achievements</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/about/abet-accreditation" class="main-navigation__menu-link" role="menuitem">Accreditation</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/about/tour-engineering" class="main-navigation__menu-link" role="menuitem">Visit</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/about/contact-us" class="main-navigation__menu-link" role="menuitem">Contact</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="main-navigation__level-2">
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/current-students" class="main-navigation__menu-link" role="menuitem">Info for current students</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/newly-admitted-students" class="main-navigation__menu-link" role="menuitem">Info for newly admitted students</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="https://www.umass.edu/gateway/info/faculty-and-staff" class="main-navigation__menu-link" role="menuitem">Info for faculty and staff</a>
+                                    </span>
+                                    <span class="main-navigation__menu-link-wrapper">
+                                        <a href="/engineering/about/open-faculty-positions" class="main-navigation__menu-link" role="menuitem">Open Faculty Positions</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li role="presentation" class="menu-section menu-section--default main-navigation__item main-navigation__level-0 main-navigation__item--dropdown">
+                            <div class="main-navigation__level-0-content">
+                                <a href="/engineering/news" class="main-navigation__menu-link" role="menuitem">News</a>
+                                <div class="main-navigation__arrow">
+                                    <button class="main-navigation__submenu-toggle" aria-expanded="false">
+                                        <span class="visually-hidden">Toggle submenu for News</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="main-navigation__submenu main-navigation__submenu--1col">
+                                <div class="main-navigation__level-1">
+                                    <div class="main-navigation__level-1-content">
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/news" class="main-navigation__menu-link" role="menuitem">News</a>
+                                        </span>
+                                        <span class="main-navigation__menu-link-wrapper">
+                                            <a href="/engineering/events" class="main-navigation__menu-link" role="menuitem">Events</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <script type="text/javascript">
+                    let controlNav = document.querySelector('.main-navigation');
+                    let controlNavButton = document.querySelector('#main-menu-toggle');
+                    let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                    let desktopMenu = window.matchMedia('(min-width: 48rem)');
+
+                    if (typeof controlNav !== 'undefined' && controlNav !== null && typeof ResizeObserver === 'function') {
+                        // Close mobile menu when resizing to desktop.
+                        let resizeObserver = new ResizeObserver(function() {
+                            if (desktopMenu.matches) {
+                                controlNav.classList.add('main-navigation--closed');
+                                document.body.classList.remove('menu-open');
+                                controlNavButton.setAttribute('aria-expanded', false);
+                            }
+                        }
+                        );
+                        resizeObserver.observe(controlNav);
+                    }
+
+                    controlNavButton.addEventListener('click', function() {
+                        let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+                        this.setAttribute('aria-expanded', !expanded);
+
+                        if (controlNav) {
+                            controlNav.classList.toggle('main-navigation--closed');
+                            document.body.classList.toggle('menu-open');
+
+                            if (isIOS) {
+                                if (!controlNav.classList.contains('main-navigation--closed')) {
+                                    /*
+          * In iOS when the scrollY is equal to 0 the UIToolbar
+          * is showed at bottom of the window and is required
+          * the support class 'ios-only'.
+          */
+                                    if (window.scrollY === 0) {
+                                        controlNav.classList.add('ios-only');
+                                    }
+                                } else {
+                                    /*
+          * Anyway when navigation has closed the support
+          * class is not required.
+          */
+                                    controlNav.classList.remove('ios-only');
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </header>
+            <div class="overlay"></div>
+            <div class="region region-highlighted highlighted">
+                <div id="block-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+                    <nav role="navigation" aria-labelledby="system-breadcrumb" class="breadcrumb">
+                        <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item">
+                                <a href="/engineering/" class="breadcrumb__link">Home</a>
+                            </li>
+                            <li class="breadcrumb__item">
+                                <a href="/engineering/academics" class="breadcrumb__link">Academics</a>
+                            </li>
+                            <li class="breadcrumb__item">
+                                <a href="/engineering/academics/departments" class="breadcrumb__link">Departments</a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div data-drupal-messages-fallback class="hidden"></div>
+            </div>
+            <main id="main-content" class="main-content" role="main">
+                <div class="layout-content">
+                    <div class="region region-content content">
+                        <div id="block-webeco-theme-content" class="block block-system block-system-main-block">
+                            <article class="borders-on twocol-75-25">
+                                <section class="twocol-75-25__header">
+                                    <div class="page-header page-header--bg-full page-header--with-image page-header--no-subtitle">
+                                        <div class="page-header__featured-image">
+                                            <div class="media--_-3-page-header media media--type-image">
+                                                <picture>
+                                                    <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=jgs88-qh 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=Yrp9qb2k 774w" media="all and (min-width: 87.5rem)" type="image/png" sizes="432px"/>
+                                                    <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xs/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=-p9DnHCF 275w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_s/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=7PyL3HoU 344w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_m/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=6NuYNd2N 430w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=-j5RoseI 516w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=jgs88-qh 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=Yrp9qb2k 774w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_3xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=mfR4SkvJ 928w" media="all and (min-width: 60rem)" type="image/png" sizes="32vw"/>
+                                                    <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xs/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=-p9DnHCF 275w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_s/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=7PyL3HoU 344w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_m/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=6NuYNd2N 430w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=-j5RoseI 516w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=jgs88-qh 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=Yrp9qb2k 774w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_3xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=mfR4SkvJ 928w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_4xl/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=ATT0WkjD 1160w" type="image/png" sizes="100vw"/>
+                                                    <img src="/engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/ECE-group-photo.png?h=29eab041&amp;itok=-j5RoseI" alt="ECE students standing on steps of Marcus by senior design banner"/>
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="page-header__title-wrapper">
+                                            <h1 class="page-header__title page-header__title-short">
+                                                <span class="page-header__title-value">Electrical and Computer Engineering</span>
+                                            </h1>
+                                            <span class="page-header__title-wrapper-bg"></span>
+                                        </div>
+                                        <div class="page-header__metadata"></div>
+                                    </div>
+                                </section>
+                                <section class="text-area twocol-75-25__content" id="twocol-75-25--content">
+                                    <p class="department__introduction">Offering cutting-edge research to address social challenges. Providing a top-ranked education with hands-on opportunities for students to learn and create.</p>
+                                    <p>
+                                        Electrical and Computer Engineering offers two undergraduate degree programs accredited by the <a href="/engineering/node/801">Engineering Accreditation Commission of ABET:</a>
+                                        the Bachelor of Science in Computer Engineering and the Bachelor of Science in Electrical Engineering. The department has funded graduate research programs in sensing systems, communications and signal processing, computer and embedded systems, nanoelectronics and internet systems. 
+                                    </p>
+                                    <p>
+                                        The B.S. degrees have both an honors option and a five year B.S./M.S. option for qualified students; distinctions of our program include hands-on <a href="/engineering/node/7331">Senior Design Projects </a>
+                                        and the <a href="/engineering/node/1906">M5 </a>
+                                        makerspace.
+                                    </p>
+                                    <p>
+                                        Our microwave engineering program is nationally recognized with its <a href="/engineering/node/611">Microwave Remote Sensing Lab (MIRSL)</a>
+                                        and graduated  NSF Engineering Research <a href="/engineering/node/546">Center for Collaborative Adaptive Sensing of the Atmosphere (CASA)</a>
+                                        . The department's emerging areas of research excellence include nanoelectronics, hardware and physical-layer security and IOT (Internet of Things), as well as bioelectronic devices and systems.
+                                    </p>
+                                    <p>
+                                        <a href="/engineering/node/7281">Read more about our faculty-led research labs and areas of research expertise.</a>
+                                    </p>
+                                </section>
+                                <section class="twocol-75-25__footer content--striped ">
+                                    <article class="degree-list" aria-labelledby="degree-list" role="article">
+                                        <h2 id="degree-list" class="degree-list__title">Explore our programs</h2>
+                                        <div class="views-element-container">
+                                            <div class="degree-list__wrapper degree-list__wrapper--2 js-view-dom-id-a4fd909b66ac18ee10051247faa193c68a5f2bf6d4b8cd0379ce26c5c8ed5096">
+                                                <div class="degree-list__items link-list--items">
+                                                    <h3 class="degree-list__level-of-study">Undergraduate</h3>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/engineering-management-minor" hreflang="en">Engineering Management Minor </a>
+                                                    </div>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/bachelor-science-computer-engineering" hreflang="en">Bachelor of Science in Computer Engineering</a>
+                                                    </div>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/bachelor-science-electrical-engineering" hreflang="en">Bachelor of Science in Electrical Engineering </a>
+                                                    </div>
+                                                </div>
+                                                <div class="degree-list__items link-list--items">
+                                                    <h3 class="degree-list__level-of-study">Graduate</h3>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/ms-materials-science-and-engineering" hreflang="en">Master of Science in Materials Science and Engineering</a>
+                                                    </div>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/phd-electrical-and-computer-engineering" hreflang="en">PhD in Electrical and Computer Engineering </a>
+                                                    </div>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/graduate-certificate-microwave-engineering" hreflang="en">Graduate Certificate in Microwave Engineering </a>
+                                                    </div>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/41-accelerated-ms-electricalcomputer-eng" hreflang="en">4+1 Accelerated Master &#039;s Degree in Electrical and Computer Engineering </a>
+                                                    </div>
+                                                    <div class="degree-list__item link-list--item views-row">
+                                                        <a href="/engineering/academics/ms-electrical-computer-engineering" hreflang="en">Master of Science in Electrical and Computer Engineering </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="research-areas link-list" aria-labelledby="research-areas" role="article">
+                                        <div class="research-areas__description link-list__content-first">
+                                            <h2 id="research-areas" class="research-areas__heading">Research areas</h2>
+                                        </div>
+                                        <div class="research-areas__links link-list__content-second">
+                                            <div class="views-element-container">
+                                                <div class="js-view-dom-id-5729d69c4ccb704f0a968fe76ad54257855dd731984add0fd949edd9f65825b5">
+                                                    <div class="link-list--items">
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/advanced-manufacturing-and-supply-chain-management" hreflang="en">Advanced manufacturing and supply chain management</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/ai-autonomy-and-robotics" hreflang="en">AI, autonomy, and robotics</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/computing-and-cybersecurity" hreflang="en">Computing and cybersecurity</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/energy-environment-and-water" hreflang="en">Energy, environment, and water</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/healthcare-and-biomedicine" hreflang="en">Healthcare and biomedicine</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/materials-and-nanotechnology" hreflang="en">Materials and nanotechnology</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/pervasive-sensing-and-communications" hreflang="en">Pervasive sensing and communications</a>
+                                                        </div>
+                                                        <div class="link-list--item views-row">
+                                                            <a href="/engineering/research/research-areas/smart-communities-and-infrastructure" hreflang="en">Smart communities and infrastructure</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="video video--default featured-video featured-video--black" aria-labelledby="featured-video" role="article">
+                                        <div class="featured-video__video">
+                                            <iframe src="/engineering/media/oembed?url=https%3A//youtu.be/zrJwZRauO4E&amp;max_width=1168&amp;max_height=672&amp;hash=GykXRCpWvBTPhsfZSi7cSoihBa8ZVnt0ZImk96iiIh4" frameborder="0" allowtransparency width="1168" height="672" class="media-oembed-content" title="Introducing Shazam, charge-free wearable devices"></iframe>
+                                        </div>
+                                    </article>
+                                    <article class="benefits benefits--default" role="article">
+                                        <div class="benefit benefit--default">
+                                            <div class="benefit__image">
+                                                <div class="media--_-3 media media--type-image">
+                                                    <picture>
+                                                        <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=a-DMdqxj 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=5__jKgYr 774w" media="all and (min-width: 87.5rem)" type="image/jpeg" sizes="640px"/>
+                                                        <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_m/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=_LW7GJaQ 430w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=BWeDm9ud 516w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=a-DMdqxj 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=5__jKgYr 774w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_3xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=bS9RHfnr 928w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_4xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=nVPrzZDB 1160w" media="all and (min-width: 60rem)" type="image/jpeg" sizes="50vw"/>
+                                                        <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xs/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=gvCigTx0 275w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_s/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=wwnMsdnD 344w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_m/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=_LW7GJaQ 430w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=BWeDm9ud 516w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=a-DMdqxj 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=5__jKgYr 774w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_3xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=bS9RHfnr 928w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_4xl/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=nVPrzZDB 1160w" type="image/jpeg" sizes="100vw"/>
+                                                        <img src="/engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/16150_037%20%281%29.jpg?h=76ff30df&amp;itok=BWeDm9ud" alt="Students on steps flying drone"/>
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="benefit__content">
+                                                <h3 class="benefit__title">Senior Design Projects</h3>
+                                                <div class="benefit__description">
+                                                    <p>
+                                                        A course providing invaluable, hands-on project opportunities that complement our rigorous <a href="/engineering/node/1856">computer engineering</a>
+                                                        and <a href="/engineering/node/1866">electrical engineering</a>
+                                                        curricula. 
+                                                    </p>
+                                                </div>
+                                                <div class="benefit__link">
+                                                    <a href="/engineering/academics/senior-design-projects-ece">Visit our student design pages</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="benefit benefit--default">
+                                            <div class="benefit__image">
+                                                <div class="media--_-3 media media--type-image">
+                                                    <picture>
+                                                        <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=4N8l41mj 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=HIj3pkQt 774w" media="all and (min-width: 87.5rem)" type="image/jpeg" sizes="640px"/>
+                                                        <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_m/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=xyAsafsc 430w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=3LgflhIy 516w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=4N8l41mj 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=HIj3pkQt 774w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_3xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=ivtSI071 928w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_4xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=kUWtNycG 1160w" media="all and (min-width: 60rem)" type="image/jpeg" sizes="50vw"/>
+                                                        <source srcset="/engineering/sites/g/files/ijdqth166/files/styles/4_3_xs/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=cXniGDS2 275w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_s/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=JFuWhos9 344w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_m/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=xyAsafsc 430w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=3LgflhIy 516w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=4N8l41mj 645w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_2xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=HIj3pkQt 774w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_3xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=ivtSI071 928w, /engineering/sites/g/files/ijdqth166/files/styles/4_3_4xl/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=kUWtNycG 1160w" type="image/jpeg" sizes="100vw"/>
+                                                        <img src="/engineering/sites/g/files/ijdqth166/files/styles/4_3_l/public/2022-11/M5makerspace.jpeg?h=5f1fe6f7&amp;itok=3LgflhIy" alt="images of benches and equipment in M5 makerspace"/>
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="benefit__content">
+                                                <h3 class="benefit__title">M5 makerspace</h3>
+                                                <div class="benefit__description">
+                                                    <p>M5 is ECE's makerspace where members advance their technical interests through experimentation, exploration, interaction, and entrepreneurship.</p>
+                                                </div>
+                                                <div class="benefit__link">
+                                                    <a href="https://www.umassamherstm5.org/">M5</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="link-list link-list--default" role="article">
+                                        <div class="link-list__content-first">
+                                            <h2>IMPORTANT LINKS</h2>
+                                        </div>
+                                        <div class="link-list__content-second">
+                                            <ul class="link-list--items">
+                                                <li class="link-list--item">
+                                                    <a href="/engineering/about/abet-accreditation/abet-accreditation-electrical-engineering">ABET Accreditation</a>
+                                                </li>
+                                                <li class="link-list--item">
+                                                    <a href="/engineering/office-student-affairs">Advising, Registration &amp;Curriculum Worksheets</a>
+                                                </li>
+                                                <li class="link-list--item">
+                                                    <a href="/engineering/community/student-organizations">Student Design Teams, Makerspaces &amp;Organizations</a>
+                                                </li>
+                                                <li class="link-list--item">
+                                                    <a href="/engineering/office-student-affairs/academic-support-resources">Academic Support Resources</a>
+                                                </li>
+                                                <li class="link-list--item">
+                                                    <a href="/engineering/about/open-faculty-positions">Open Faculty Positions</a>
+                                                </li>
+                                                <li class="link-list--item">
+                                                    <a href="https://www.umass.edu/engineering/academics/senior-design-projects-ece">Senior Design Projects</a>
+                                                </li>
+                                                <li class="link-list--item">
+                                                    <a href="/engineering/events">Events and seminars</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                    <article class="featured-news" aria-labelledby="featured-news" role="article">
+                                        <div class="section-header">
+                                            <h2 id="featured-news" class="section-header__title">In the news</h2>
+                                            <div class="section-header__more">
+                                                <a href="/engineering/news?s=&amp;field_news__related_departments_target_id%5B296%5D=296" class="read-more">See all department news</a>
+                                            </div>
+                                        </div>
+                                        <div class="featured-news__list">
+                                            <div class="views-element-container">
+                                                <article role="article" class="news news--view-mode-teaser-vertical">
+                                                    <section class="node__content">
+                                                        <div class="news__category">
+                                                            <span>
+                                                                <a href="/engineering/category/research" hreflang="en">Research</a>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="news__title">
+                                                            <a href="/engineering/news/xia-memristors-research">Pioneering Research on Memristors Pushes the Frontier of Artificial Intelligence Hardware</a>
+                                                        </h3>
+                                                        <div class="news__summary">
+                                                            <p>Professor Qiangfei Xia's groundbreaking research substantially suppresses “noise” in memristors, creating a potential boon for large-scale AI applications. </p>
+                                                        </div>
+                                                        <div class="news__published-date">April 4, 2023</div>
+                                                    </section>
+                                                </article>
+                                                <article role="article" class="news news--view-mode-teaser-vertical">
+                                                    <section class="node__content">
+                                                        <div class="news__category">
+                                                            <span>
+                                                                <a href="/engineering/category/community" hreflang="en">Community</a>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="news__title">
+                                                            <a href="/engineering/news/college-announces-2023-outstanding-alumni">College Announces 2023 Outstanding Alumni</a>
+                                                        </h3>
+                                                        <div class="news__summary">
+                                                            <p>The College is proud to announce the recipients of its 2023 Outstanding Alumni Awards, including five Distinguished Alumni and five Outstanding Young Alumni.</p>
+                                                        </div>
+                                                        <div class="news__published-date">April 3, 2023</div>
+                                                    </section>
+                                                </article>
+                                                <article role="article" class="news news--view-mode-teaser-vertical">
+                                                    <section class="node__content">
+                                                        <div class="news__category">
+                                                            <span>
+                                                                <a href="/engineering/category/faculty" hreflang="en">Faculty</a>
+                                                            </span>
+                                                        </div>
+                                                        <h3 class="news__title">
+                                                            <a href="/engineering/news/tooker-and-epstein-icons-fellows">Nicholas Tooker and Shira Epstein Team up as iCons Teaching Fellows</a>
+                                                        </h3>
+                                                        <div class="news__summary">
+                                                            <p>Tooker and Epstein will teach iCons 389H; a team-oriented, student-driven, discovery laboratory in which students address real-world, energy-related issues.</p>
+                                                        </div>
+                                                        <div class="news__published-date">March 27, 2023</div>
+                                                    </section>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="featured-people" aria-labelledby="featured-people" role="article">
+                                        <div class="section-header">
+                                            <h2 id="featured-people" class="section-header__title">Contact</h2>
+                                            <div class="section-header__more">
+                                                <a href="/engineering/about/directory?s=&amp;field_person__profile_type_ref_target_id%5B411%5D=411&amp;field_person__department_target_id%5B296%5D=296" class="read-more">See all department faculty</a>
+                                            </div>
+                                        </div>
+                                        <article role="article" class="person person--view-mode-featured-teaser">
+                                            <h2 class="person__title">
+                                                <a href="/engineering/about/directory/christopher-hollot" rel="bookmark">Christopher Hollot</a>
+                                            </h2>
+                                            <section class="node__content">
+                                                <div class="person__content">
+                                                    <div class="person__name">
+                                                        <h2>
+                                                            <a href="/engineering/about/directory/christopher-hollot">Christopher Hollot</a>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="person__position-role">
+                                                        Professor, <a href="/engineering/academics/departments/electrical-and-computer-engineering">Electrical and Computer Engineering</a>
+                                                        <br>
+                                                        Department Head, <a href="/engineering/academics/departments/electrical-and-computer-engineering">Electrical and Computer Engineering</a>
+                                                    </div>
+                                                    <div class="person__summary">
+                                                        <p>Theory and application of feedback control systems.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="person__featured-image">
+                                                    <div class="media--_-1-square media media--type-image">
+                                                        <img loading="lazy" src="/engineering/sites/g/files/ijdqth166/files/styles/1_1_s/public/2022-11/CV_Hollot.jpg?h=bc0a77c1&amp;itok=3Du89djL" width="216" height="216" alt="Christopher Hollot"/>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </article>
+                                    </article>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer role="contentinfo" aria-labelledby="site-footer-heading">
+                <h2 id="site-footer-heading" class="visually-hidden">Site footer</h2>
+                <div class="region region-footer footer">
+                    <div id="block-sitefooter" class="footer__content block block-block-content block-block-content949fe1d8-3b32-4b40-84b1-b782fbd97f08">
+                        <div class="footer__site-name">College of Engineering</div>
+                        <ul class="footer__social" aria-label="Social Media Links">
+                            <li>
+                                <a href="https://www.twitter.com/umassengin" rel="noreferrer">
+                                    <svg role="img" height="14" viewBox="0 0 16 14" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Find us on Twitter</title>
+                                        <path d="m20.8333333 7.34782609c-.5507246.20652174-1.1702898.41304348-1.8586956.55072463.6195652-.41304347 1.1702898-1.10144927 1.3768116-1.85869565-.6195652.3442029-1.307971.61956522-2.0652174.75724638-.5507247-.55072464-1.3768116-.96376812-2.4094203-.96376812-1.8586957 0-3.2355073 1.3768116-3.2355073 3.23550725 0 .20652174 0 .55072464.1376812.75724638-2.6847826-.13768116-5.09420289-1.3768116-6.7463768-3.44202899-.13768116.55072464-.41304348 1.10144928-.41304348 1.72101449 0 1.10144928.55072464 2.20289854 1.37681159 2.68478264-.55072464 0-1.10144927-.2065218-1.51449275-.4130435 0 1.6521739 1.10144927 2.9601449 2.61594203 3.1666667-.20652174.1376811-.41304348.2065217-.75724638.2065217-.20652174 0-.41304348 0-.61956522 0 .41304348 1.307971 1.65217392 2.2028986 3.02898551 2.2717391-1.10144928.8949276-2.47826087 1.3768116-3.99275362 1.3768116-.3442029 0-.55072464 0-.75724638 0 1.37681159.9637681 3.16666667 1.3768116 4.95652174 1.3768116 5.98913046 0 9.22463766-4.9565217 9.22463766-9.22463766 0-.13768116 0-.3442029 0-.41304348.6884058-.61956522 1.2391305-1.10144928 1.6521739-1.78985507" fill="#fff" fill-rule="evenodd" transform="translate(-5 -5)"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/umassengineering" rel="noreferrer">
+                                    <svg role="img" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Find us on Facebook</title>
+                                        <path d="m19.9593333 5h-14.0853333c-.48269687 0-.874.39130313-.874.874v14.0853333c0 .4826969.39130313.874.874.874h7.5835333v-6.1230666h-2.0564333v-2.3965334h2.0564333v-1.7625666c0-2.04503337 1.2489334-3.15843337 3.0735667-3.15843337.6158056-.00219435 1.23127.02930829 1.8436333.09436667v2.13623333h-1.2616c-.9899 0-1.1811666.47119997-1.1811666 1.16343337v1.5263333h2.3731l-.3090667 2.3965333h-2.0640333v6.1237h4.0273666c.4826969 0 .874-.3913031.874-.874v-14.0853333c0-.48269687-.3913031-.874-.874-.874z" fill="#fff" fill-rule="evenodd" transform="translate(-5 -5)"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/playlist?list=PLEAE8BFE6D390C1F3" rel="noreferrer">
+                                    <svg role="img" height="15" viewBox="0 0 23 15" width="23" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Find us on YouTube</title>
+                                        <path d="m22.935049 8.18627451s-.2389706-1.43382353-.8762255-2.07107843c-.7965686-.87622549-1.752451-.87622549-2.1507353-.87622549-2.9473039-.23897059-7.4877451-.23897059-7.4877451-.23897059s-4.54044114 0-7.48774506.23897059c-.47794118 0-1.35416667 0-2.23039216.87622549-.6372549.6372549-.79656863 2.07107843-.79656863 2.07107843s-.23897058 1.67279412-.23897058 3.42524509v1.5931373c0 1.6727941.23897058 3.4252451.23897058 3.4252451s.23897059 1.4338235.8762255 2.0710784c.79656862.8762255 1.9117647.7965686 2.38970588.8762255 1.75245098.1593137 7.32843137.2389706 7.32843137.2389706s4.5404412 0 7.567402-.2389706c.3982843-.0796569 1.3541666-.0796569 2.1507353-.8762255.6372549-.6372549.8762254-2.0710784.8762254-2.0710784s.2389706-1.6727942.2389706-3.4252451v-1.5931373c-.1593137-1.75245097-.3982843-3.42524509-.3982843-3.42524509zm-12.745098 7.16911769v-5.97426475l5.7352941 2.86764705z" fill="#fff" fill-rule="evenodd" transform="translate(-1 -5)"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/school/umass-amherst-college-of-engineering" rel="noreferrer">
+                                    <svg role="img" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Find us on LinkedIn</title>
+                                        <path d="m20.8333333 17.8517316c0 1.6450216-1.3365801 2.9816017-2.9816017 2.9816017h-9.87012987c-1.64502164 0-2.98160173-1.3365801-2.98160173-2.9816017v-9.87012987c0-1.64502164 1.33658009-2.98160173 2.98160173-2.98160173h9.87012987c1.6450216 0 2.9816017 1.33658009 2.9816017 2.98160173zm-12.1320346-10.17857143c-.82251082 0-1.33658009.51406927-1.33658009 1.23376624-.10281385.71969697.41125542 1.23376619 1.23376624 1.23376619.82251082 0 1.33658009-.51406922 1.33658009-1.23376619s-.51406927-1.23376624-1.23376624-1.23376624zm1.13095238 10.58982683v-7.1969697h-2.36471861v7.1969697zm8.53354982 0v-4.1125541c0-2.1590909-1.1309524-3.1872294-2.7759741-3.1872294-1.2337662 0-1.7478355.7196969-2.056277 1.2337662v-1.0281385h-2.3647186v7.1969697h2.3647186v-4.1125541c0-.2056278 0-.4112555.1028138-.6168832.1028139-.4112554.5140693-.8225108 1.2337663-.8225108.8225108 0 1.2337662.6168831 1.2337662 1.6450217v3.8041125z" fill="#fff" fill-rule="evenodd" transform="translate(-5 -5)"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/umassengineering/" rel="noreferrer">
+                                    <svg role="img" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <title>Find us on Instagram</title>
+                                        <path d="m12.9166667 5c-2.1666667 0-2.4166667 0-3.25000003.08333333-.83333334 0-1.41666667.16666667-1.91666667.33333334-.5.16666666-1 .5-1.41666667.91666666-.41666666.41666667-.75.91666667-.91666666 1.41666667-.16666667.5-.33333334 1.08333333-.33333334 1.91666667-.08333333.83333333-.08333333 1.08333333-.08333333 3.25000003 0 2.1666666 0 2.4166666.08333333 3.25 0 .8333333.16666667 1.4166666.33333334 1.9166666.16666666.5.5 1 .91666666 1.4166667.41666667.4166667.91666667.75 1.41666667.9166667.5.1666666 1.08333333.3333333 1.91666667.3333333.83333333 0 1.08333333.0833333 3.25000003.0833333 2.1666666 0 2.4166666 0 3.25-.0833333.8333333 0 1.4166666-.1666667 1.9166666-.3333333.5-.1666667 1-.5 1.4166667-.9166667s.75-.9166667.9166667-1.4166667c.1666666-.5.3333333-1.0833333.3333333-1.9166666 0-.8333334.0833333-1.0833334.0833333-3.25 0-2.1666667 0-2.4166667-.0833333-3.25000003 0-.83333334-.1666667-1.41666667-.3333333-1.91666667-.1666667-.5-.5-1-.9166667-1.41666667-.4166667-.41666666-.9166667-.75-1.4166667-.91666666-.5-.16666667-1.0833333-.33333334-1.9166666-.33333334-.8333334-.08333333-1.0833334-.08333333-3.25-.08333333m0 1.41666667c2.0833333 0 2.3333333 0 3.1666666.08333333.75 0 1.1666667.16666667 1.5.25.3333334.16666667.6666667.33333333.9166667.58333333s.4166667.58333334.5833333.91666667c.0833334.25.25.66666667.25 1.5 0 .8333333.0833334 1.0833333.0833334 3.25 0 2.0833333 0 2.3333333-.0833334 3.1666667 0 .75-.1666666 1.1666666-.25 1.5-.1666666.3333333-.3333333.6666666-.5833333.9166666s-.5.4166667-.9166667.5833334c-.25.0833333-.6666666.25-1.5.25-.8333333 0-1.0833333.0833333-3.1666666.0833333-2.0833334 0-2.3333334 0-3.1666667-.0833333-.75 0-1.16666667-.1666667-1.5-.25-.33333333-.1666667-.66666667-.3333334-.91666667-.5833334s-.41666666-.5833333-.58333333-.9166666c-.08333333-.25-.25-.6666667-.25-1.5 0-.8333334-.08333333-1.0833334-.08333333-3.1666667s0-2.3333333.08333333-3.25c0-.75.16666667-1.16666667.25-1.5.16666667-.33333333.33333333-.66666667.58333333-.91666667s.5-.41666666.91666667-.58333333c.25-.08333333.66666667-.25 1.5-.25.8333333-.08333333 1.0833333-.08333333 3.1666667-.08333333m0 9.16666663c-1.4166667 0-2.6666667-1.1666666-2.6666667-2.6666666s1.1666667-2.6666667 2.6666667-2.6666667 2.6666666 1.1666667 2.6666666 2.6666667-1.25 2.6666666-2.6666666 2.6666666m0-6.74999997c-2.25 0-4.08333337 1.83333337-4.08333337 4.08333337s1.83333337 4.0833333 4.08333337 4.0833333 4.0833333-1.8333333 4.0833333-4.0833333-1.8333333-4.08333337-4.0833333-4.08333337m5.1666666-.16666666c0 .5-.4166666.91666666-.9166666.91666666s-.9166667-.41666666-.9166667-.91666666.4166667-.91666667.9166667-.91666667.9166666.41666667.9166666.91666667" fill="#fff" fill-rule="evenodd" transform="translate(-5 -5)"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="footer__address">
+                            <div class="visually-hidden">Address</div>
+                            <p class="address" translate="no">
+                                <span class="locality">Amherst</span>
+                                , <span class="administrative-area">MA</span>
+                                <span class="postal-code">01003</span>
+                                <br>
+                                <span class="country">United States</span>
+                            </p>
+                        </div>
+                        <div class="footer__menu-first">
+                            <nav class="footer__menu-primary">
+                                <h3 class="footer__heading">Info for</h3>
+                                <ul class="footer__menu-links">
+                                    <li>
+                                        <a href="/engineering/current-students">Current students</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/newly-admitted-students">Newly admitted students</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.umass.edu/gateway/info/faculty-and-staff">Faculty and staff</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.umassalumni.com/">Alumni</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="footer__menu-secondary">
+                                <h3 class="footer__heading">Academics</h3>
+                                <ul class="footer__menu-links">
+                                    <li>
+                                        <a href="/engineering/academics/programs">Academic programs</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/departments">Departments</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/office-student-affairs">Academic advising</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__menu-second">
+                            <nav class="footer__menu-primary">
+                                <h3 class="footer__heading">About</h3>
+                                <ul class="footer__menu-links">
+                                    <li>
+                                        <a href="/engineering/about">About the College of Engineering</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/news">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/events">Events</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/about/directory">Faculty &amp;Staff</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/about/contact-us">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="/engineering/give-engineering">Give to Engineering</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="footer__menu-secondary">
+                                <h3 class="footer__heading">Utilities</h3>
+                                <ul class="footer__menu-links">
+                                    <li>
+                                        <a href="https://www.umass.edu/it/email">Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.spire.umass.edu/">SPIRE</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://umass.moonami.com/">Moodle</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.umass.edu/it/online-storage-collaboration">Online storage</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.umass.edu/peoplefinder/">People Finder</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="global-footer link--dark" role="region" aria-labelledby="global-footer-heading">
+                <h2 id="global-footer-heading" class="visually-hidden">Global footer</h2>
+                <a class="global-footer__wordmark" href="https://www.umass.edu/" title="University of Massachusetts Amherst">
+                    <img src="//www.umass.edu/static/branding/images/UMassAmherst_longform-WHITE.svg" alt="University of Massachusetts Amherst" id="umass--logo-longform--stacked">
+                </a>
+                <ul class="global-footer__links" aria-label="Global Footer Links">
+                    <li class="global-footer__home">
+                        ©2023 <a href="https://www.umass.edu/">University of Massachusetts Amherst</a>
+                    </li>
+                    <li class="global-footer__item">
+                        <a class="global-footer__link" href="https://www.umass.edu/gateway/site-policies">Site policies</a>
+                    </li>
+                    <li class="global-footer__item">
+                        <a class="global-footer__link" href="https://www.umass.edu/it/information-privacy-policy">Privacy</a>
+                    </li>
+                    <li class="global-footer__item">
+                        <a class="global-footer__link" href="https://www.umass.edu/diversity/data-policies/policies">Non-discrimination notice</a>
+                    </li>
+                    <li class="global-footer__item">
+                        <a class="global-footer__link" href="https://www.umass.edu/accessibility">Accessibility</a>
+                    </li>
+                    <li class="global-footer__item">
+                        <a class="global-footer__link" href="https://www.umass.edu/it/policies/it-policy-acceptable-use-interpretation-guidelines">Terms of use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">
+            {"path":{"baseUrl":"\/engineering\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/296","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ckeditorheight":{"offset":1,"line_height":1.5,"unit":"em","disable_autogrow":false},"data":{"extlink":{"extTarget":false,"extTargetNoOverride":true,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"#umass--global--header","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":["umass.edu","acsitefactory.com","ddev.site","tugboat.qa","tugboatqa.com"]}},"user":{"uid":0,"permissionsHash":"f647fc23b53de6a62224f17d7cb3902684a981a32f0a50ffb9b06ef5cde10f70"}}
+        </script>
+        <script src="/engineering/core/assets/vendor/jquery/jquery.min.js?v=3.6.3"></script>
+        <script src="/engineering/core/misc/polyfills/element.matches.js?v=9.5.8"></script>
+        <script src="/engineering/core/misc/polyfills/object.assign.js?v=9.5.8"></script>
+        <script src="/engineering/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+        <script src="/engineering/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+        <script src="/engineering/core/misc/drupalSettingsLoader.js?v=9.5.8"></script>
+        <script src="/engineering/core/misc/drupal.js?v=9.5.8"></script>
+        <script src="/engineering/core/misc/drupal.init.js?v=9.5.8"></script>
+        <script src="/engineering/core/assets/vendor/picturefill/picturefill.min.js?v=3.0.3"></script>
+        <script src="/engineering/core/misc/jquery.once.bc.js?v=9.5.8"></script>
+        <script src="/engineering/themes/custom/webeco_theme/src/scripts.min.js?v=1.x"></script>
+        <script src="/engineering/modules/contrib/extlink/extlink.js?v=9.5.8"></script>
+        <script src="/engineering/profiles/webeco/modules/webeco_core/js/link_list_icons.js?rtzip8"></script>
+        <script type="text/javascript">
+            window.NREUM || (NREUM = {});
+            NREUM.info = {
+                "beacon": "bam.nr-data.net",
+                "licenseKey": "NRJS-7ca6f9873b55d52ebdf",
+                "applicationID": "1086172007,1086234457",
+                "transactionName": "ZV1WMkYAWkBUBUVaXFwXdQVACFtdGhZQVFZtW1UFXAQ=",
+                "queueTime": 43,
+                "applicationTime": 29,
+                "atts": "SRpVRA4aSU4=",
+                "errorBeacon": "bam.nr-data.net",
+                "agent": ""
+            }
+        </script>
+    </body>
+</html>
